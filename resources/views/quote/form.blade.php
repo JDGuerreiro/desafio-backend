@@ -19,7 +19,7 @@
                     </div>
                     @endif
 
-                    <form method="POST" action="{{ route('currency_trade') }}">
+                    <form method="POST" action="{{ route('quote_exchange_trade_post') }}">
                     @csrf
 
                     <div class="row">
@@ -27,7 +27,7 @@
                             <label for="value_for_conversion_BRL">Valor para conversão em BRL</label>
                             <input  id="amount_brl" 
                                     class="block mt-1 w-full" 
-                                    type="number" min="0.00" max="100000.00" step="0.01" 
+                                    type="number" min="1000.00" max="100000.00" step="0.01" 
                                     name="amount_brl" :value="old('value_for_conversion_BRL')" 
                                     required autofocus />
                         </div>
@@ -41,7 +41,7 @@
                                     required autofocus />
                                 <option value="">Selecione a moeda desejada</option>
                                 @foreach ($currencies as $currency)
-                                <option value="{{$currency->code}}">{{$currency->name}}</option>
+                                <option value="{{ $currency["codein"] }}">{{ explode("/", $currency["name"])[1] }}</option>
                                 @endforeach
                             </select>
                         </div>

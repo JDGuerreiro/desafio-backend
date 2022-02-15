@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\PaymentMethodsController;
-use App\Http\Controllers\FeesSetupController;
+use App\Http\Controllers\{
+        MainController,
+        PaymentMethodsController,
+        FeesSetupController,
+        QuoteController
+    };
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +27,11 @@ Route::resource('payment_fees', FeesSetupController::class, ['names'=>['index'=>
 
 Route::resource('payment_methods', PaymentMethodsController::class, ['names'=>['index'=>'payment_methods']]);
 
-Route::get('/dashboard', [MainController::class, 'trade'])->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [QuoteController::class, 'QuoteForm'])->middleware(['auth'])->name('dashboard');
 
-Route::post('/dashboard', [MainController::class, 'tradePost'])->middleware(['auth'])->name('currency_trade');
+Route::post('/dashboard', [QuoteController::class, 'QuoteFormPost'])->middleware(['auth'])->name('quote_exchange_trade_post');
 
-Route::get('/history', [MainController::class, 'history'])->middleware(['auth'])->name('history');
+Route::get('/history', [QuoteController::class, 'history'])->middleware(['auth'])->name('history');
 
 require __DIR__.'/auth.php';
+

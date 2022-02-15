@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class CurrencyDataServiceProvider extends ServiceProvider
+class QuoteExchangeTradeServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -13,8 +13,8 @@ class CurrencyDataServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('App\Contracts\ExternalDataInterface', function($app) {
-            return new \App\Services\CurrencyDataService($app->make('GuzzleHttp\Client'));
+        $this->app->bind('App\Services\Contracts\QuoteExchangeTradeInterface', function($app) {
+            return new \App\Services\QuoteExchangeTradeService($app->make('GuzzleHttp\Client'));
         });
     }
 

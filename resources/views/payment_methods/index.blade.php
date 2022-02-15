@@ -27,7 +27,7 @@
                             <tr>
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->title }}</td>
-                                <td>{{ $item->fee }}</td>
+                                <td>{{ $item->fees }}</td>
                                 <td>
                                     <ul class="list-inline">
                                         <li><a href="{{ route('payment_methods.edit', $item->id) }}" class="btn btn-info">Editar</a></li>

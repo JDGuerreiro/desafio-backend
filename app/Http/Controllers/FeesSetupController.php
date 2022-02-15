@@ -69,14 +69,14 @@ class FeesSetupController extends Controller
      * @param  \App\Models\FeesSetup  $feesSetup
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, FeesSetup $feesSetup)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'fee_1' => 'required',
             'fee_2' => 'required',
         ]);
 
-        FeesSetup::where('id', $feesSetup->id)
+        FeesSetup::where('id', $id)
             ->update([
                 'fee_1' => $request->input('fee_1'),
                 'fee_2' => $request->input('fee_2'),

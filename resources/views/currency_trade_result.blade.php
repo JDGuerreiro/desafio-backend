@@ -1,1 +1,0 @@
-<h2>RESULTADO DA SIMULÇÃO</h2>

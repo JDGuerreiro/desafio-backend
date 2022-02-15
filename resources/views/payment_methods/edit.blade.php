@@ -21,8 +21,8 @@
                             </div>
                             <div class="col-md-2 col-sm-12 mt-6">
                                 <label for="fabricante">Taxa do método</label>
-                                <input type="number" min="0.00" max="10000.00" step="0.01"  id="fee" 
-                                       name="fee" class="form-control" value="{{ $item->fee }}">
+                                <input type="number" min="0.00" max="10000.00" step="0.01"  id="fees" 
+                                       name="fees" class="form-control" value="{{ $item->fees }}">
                             </div>
 
                         </div>

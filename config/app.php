@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'external_api' => env('TEST_API_URL'),
+    'quote_exchange_trade_api' => env('QUOTE_EXCHANGE_TRADE_API'),
 
     'name' => env('APP_NAME', 'Laravel'),
 
@@ -164,7 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         App\Providers\GuzzleClientServiceProvider::class,
-        App\Providers\CurrencyDataServiceProvider::class,
+        App\Providers\QuoteExchangeTradeServiceProvider::class,
 
         /*
          * Package Service Providers...

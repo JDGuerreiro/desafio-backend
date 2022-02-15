@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class PaymentMethodsChangeRate extends Migration
+class CreateTableFeesSetup extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class PaymentMethodsChangeRate extends Migration
      */
     public function up()
     {
-        Schema::table('payment_methods', function (Blueprint $table) {
-             $table->dropColumn('rate');
-             $table->double('fee', 8, 2);
+        Schema::create('fees_setup', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedDecimal('amount_limit');
+            $table->unsignedDecimal('fee_1');
+            $table->unsignedDecimal('fee_2');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +29,6 @@ class PaymentMethodsChangeRate extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('currency_trades');
+        Schema::dropIfExists('fees_setup');
     }
 }

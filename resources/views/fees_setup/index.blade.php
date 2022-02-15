@@ -15,7 +15,7 @@
                     <!-- Session Status -->
                     <x-auth-session-status class="mb-4" :status="session('message')" />
 
-                    <form action={{ route('payment_fees.update', $item) }} method="POST">
+                    <form action={{ route('payment_fees.update', $item->id) }} method="POST">
                         
                         @csrf
                         

@@ -16,7 +16,7 @@ class CreatePaymentMethods extends Migration
         Schema::create('payment_methods', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->double('rate', 8, 2);
+            $table->unsignedDecimal('fees');
             $table->timestamps();
         });
     }

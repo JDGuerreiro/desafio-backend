@@ -39,12 +39,12 @@ class PaymentMethodsController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'fee' => 'required',
+            'fees' => 'required',
         ]);
 
         PaymentMethod::create([
             'title' => $request->input('title'),
-            'fee' => $request->input('fee'),
+            'fees' => $request->input('fees'),
         ]);
 
         return redirect('/payment_methods')
@@ -86,13 +86,13 @@ class PaymentMethodsController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'fee' => 'required',
+            'fees' => 'required',
         ]);
 
         PaymentMethod::where('id', $id)
             ->update([
                 'title' => $request->input('title'),
-                'fee' => $request->input('fee'),
+                'fees' => $request->input('fees'),
             ]);
 
         return redirect('/payment_methods')

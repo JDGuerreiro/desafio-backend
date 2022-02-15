@@ -12,6 +12,7 @@ class FeesSetup extends Model
     protected $table = 'fees_setup';
 
     protected $fillable = [
+        'amount_limi',
         'fee_1',
         'fee_2',
     ];

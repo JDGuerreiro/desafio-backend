@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CurrencyTradeAddFeesValues extends Migration
+class InsertFeesSetup extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CurrencyTradeAddFeesValues extends Migration
      */
     public function up()
     {
-        Schema::table('currency_trades', function (Blueprint $table) {
-            $table->double('payment_method_fee_value', 8, 2);
-            $table->double('amount_fee_value', 8, 2);
-        });
+        DB::table('fees_setup')->insert(
+            ['amount_limit' => 3000, 'fee_1' => 2, 'fee_2' => 1]
+        );
     }
 
     /**
@@ -26,8 +25,6 @@ class CurrencyTradeAddFeesValues extends Migration
      */
     public function down()
     {
-        Schema::table('currency_trades', function (Blueprint $table) {
-            //
-        });
+        //
     }
 }

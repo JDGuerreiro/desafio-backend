@@ -15,7 +15,7 @@ class GuzzleClientServiceProvider extends ServiceProvider
     {
         $this->app->bind('GuzzleHttp\Client', function($app) {
             return new \GuzzleHttp\Client([
-                'base_uri' => $app->make('config')->get('app.external_api')
+                'base_uri' => $app->make('config')->get('app.quote_exchange_trade_api')
             ]);
         });
     }

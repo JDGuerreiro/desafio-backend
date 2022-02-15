@@ -16,7 +16,10 @@ class InsertPaymentMethods extends Migration
 
         // Insert some stuff
         DB::table('payment_methods')->insert(
-            ['title' => 'Boleto bancário', 'fee' => 1.45]
+            [
+                ['title' => 'Boleto bancário', 'fees' => 1.45],
+                ['title' => 'Cartão de crédito', 'fees' => 7.63],
+            ]
         );
 
     }

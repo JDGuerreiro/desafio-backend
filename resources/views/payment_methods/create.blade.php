@@ -20,7 +20,7 @@
                             </div>
                             <div class="col-md-2 col-sm-12 mt-6">
                                 <label for="fabricante">Taxa do método</label>
-                                <input type="text" id="fee" name="fee" class="form-control">
+                                <input type="text" id="fees" name="fees" class="form-control">
                             </div>
 
                         </div>
