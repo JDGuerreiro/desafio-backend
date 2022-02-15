@@ -24,3 +24,8 @@
 <p>Criar base de dados</p>
 <p>Executar: php artisan migrate</p>
 <p>Executar: php artisan key:generate</p>
+
+## Melhorias
+<p>Usar Observers e filas para envio dos emails de criação de novas cotações</p>
+<p>Usar repositories para tirar complexidade dos controllers e padronizar chamadas</p>
+<p>Testes automatizados</p>
