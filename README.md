@@ -1,26 +1,26 @@
 ## Tecnologias
-Laravel
-Laravel Breeze 
-MySQL
+<p>Laravel</p>
+<p>Laravel Breeze</p> 
+<p>MySQL</p>
 
 ## Escopo
-Ao se registrar, o usuário consegue:
-- simular cotações de compra de moeda estrangeira, sempre partindo de BRL
-- Se configurado o envio de email, receberá os detalhes da cotação no email cadastrado
-- ver seu histórico de cotações realizadas
-- configurar taxas de cobrança das formas de pagamento
-- configurar taxas de cobrança da conversão
+<p>Ao se registrar, o usuário consegue:</p>
+<p>- simular cotações de compra de moeda estrangeira, sempre partindo de BRL</p>
+<p>- Se configurado o envio de email, receberá os detalhes da cotação no email cadastrado</p>
+<p>- ver seu histórico de cotações realizadas</p>
+<p>- configurar taxas de cobrança das formas de pagamento</p>
+<p>- configurar taxas de cobrança da conversão</p>
 
-Detalhes do desafio:
-https://github.com/Oliveira-Trust/desafio-desenvolvedor/blob/master/vaga.md
+<p>Detalhes do desafio:</p>
+<p>https://github.com/Oliveira-Trust/desafio-desenvolvedor/blob/master/vaga.md</p>
 
 ## Install
-Executar: composer install
-Copiar arquivo .env.example para .env
-Configurar arquivo ".env":
-	- URL 
-	- Conexão da base de dados
-	- Envio de email
-Criar base de dados
-Executar: php artisan migrate
-Executar: php artisan key:generate
+<p>Executar: composer install</p>
+<p>Copiar arquivo .env.example para .env</p>
+<p>Configurar arquivo ".env":</p>
+<p>	- URL </p>
+<p>	- Conexão da base de dados</p>
+<p>	- Envio de email</p>
+<p>Criar base de dados</p>
+<p>Executar: php artisan migrate</p>
+<p>Executar: php artisan key:generate</p>
