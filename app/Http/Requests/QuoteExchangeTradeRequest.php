@@ -24,9 +24,9 @@ class QuoteExchangeTradeRequest extends FormRequest
     public function rules()
     {
         return [
-            'amount_brl' => 'required|numeric|min:1000|max:100000',
+            'amountBrl' => 'required|numeric|min:1000|max:100000',
             'currency' => 'required',
-            'payment_method' => 'required',
+            'paymentMethod' => 'required',
         ];
     }
 }

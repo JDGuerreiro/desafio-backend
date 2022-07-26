@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use App\Models\Quote;
 
 class CurrencyTradeEmail extends Mailable
 {
@@ -18,7 +19,7 @@ class CurrencyTradeEmail extends Mailable
      *
      * @return void
      */
-    public function __construct($fields)
+    public function __construct(Quote $fields)
     {
          $this->fields = $fields;
     }

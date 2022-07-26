@@ -24,20 +24,20 @@
 
                     <div class="row">
                         <div class="col-md-4 col-sm-12 mt-6">
-                            <label for="value_for_conversion_BRL">Valor para conversão em BRL</label>
-                            <input  id="amount_brl" 
-                                    class="block mt-1 w-full" 
-                                    type="number" min="1000.00" max="100000.00" step="0.01" 
-                                    name="amount_brl" :value="old('value_for_conversion_BRL')" 
+                            <label for="amountBrl">Valor para conversão em BRL</label>
+                            <input  id="amountBrl"
+                                    class="block mt-1 w-full"
+                                    type="number" min="1000.00" max="100000.00" step="0.01"
+                                    name="amountBrl" :value="old('amountBrl')"
                                     required autofocus />
                         </div>
 
                         <div class="col-md-4 col-sm-12 mt-6">
-                            <label for="destination_currency">Moeda de destino</label>
+                            <label for="currency">Moeda de destino</label>
 
-                            <select id="currency" 
-                                    class="block mt-1 w-full" 
-                                    name="currency" :value="old('destination_currency')" 
+                            <select id="currency"
+                                    class="block mt-1 w-full"
+                                    name="currency" :value="old('destination_currency')"
                                     required autofocus />
                                 <option value="">Selecione a moeda desejada</option>
                                 @foreach ($currencies as $currency)
@@ -47,15 +47,15 @@
                         </div>
 
                         <div class="col-md-4 col-sm-12 mt-6">
-                            <label for="payment_method">Forma de pagamento</label>
+                            <label for="paymentMethod">Forma de pagamento</label>
 
-                            <select id="payment_method" 
-                                    class="block mt-1 w-full" 
-                                    name="payment_method" :value="old('payment_method')" 
+                            <select id="paymentMethod"
+                                    class="block mt-1 w-full"
+                                    name="paymentMethod" :value="old('paymentMethod')"
                                     required autofocus />
                                 <option value="">Informe como deseja realizar o pagamento</option>
-                                @foreach ($payment_methods as $payment_method)
-                                <option value="{{ $payment_method->id }}">{{ $payment_method->title }} </option>
+                                @foreach ($paymentMethods as $paymentMethod)
+                                <option value="{{ $paymentMethod->id }}">{{ $paymentMethod->title }} </option>
                                 @endforeach
                             </select>
                         </div>
@@ -68,7 +68,7 @@
                         </x-button>
                     </div>
 
-                    </form> 
+                    </form>
 
                 </div>
             </div>

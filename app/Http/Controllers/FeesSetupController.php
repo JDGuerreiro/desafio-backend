@@ -87,14 +87,4 @@ class FeesSetupController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\FeesSetup  $feesSetup
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(FeesSetup $feesSetup)
-    {
-        //
-    }
 }

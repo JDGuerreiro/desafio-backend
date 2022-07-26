@@ -5,7 +5,7 @@ use App\Services\Contracts\QuoteExchangeTradeInterface;
 
 class QuoteExchangeTradeService implements QuoteExchangeTradeInterface
 {
-    
+
     /**
      * The active http client to conect to external api
      *
@@ -69,7 +69,7 @@ class QuoteExchangeTradeService implements QuoteExchangeTradeInterface
         $all_possible_conversions = array_keys($this->getAllPossibleConversions());
 
         $all_possible_conversions_to_currency = array_filter($all_possible_conversions, function($value) use ($currency) {
-            return strpos($value, $currency."-")!==false;  
+            return strpos($value, $currency."-")!==false;
         });
 
         return $this->getCurrenciesDetails($all_possible_conversions_to_currency);
